@@ -1,0 +1,26 @@
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.landing_padding{
+    padding: 200px 0;
+    position: relative;
+}
+.main_head_text{
+    font-size: 5vw;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.name_img{
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+}
+.slant{
+    width: 100%;
+    position: absolute;
+}
