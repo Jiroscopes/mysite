@@ -2,12 +2,19 @@ h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
+.landing_section{
+    background-image: url(../images/slant01.svg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .landing_padding{
-    padding: 200px 0;
+    padding: 250px 0;
     position: relative;
 }
 .main_head_text{
-    font-size: 5vw;
+    
     position: absolute;
     z-index: 2;
     top: 50%;
