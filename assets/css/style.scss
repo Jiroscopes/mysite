@@ -1,0 +1,233 @@
+---
+---
+
+
+//Colors
+
+$black: #171717;
+$grey: #f0f0f0;
+$grey-text: #696969;
+
+// Fonts
+
+$heading-font-size: 3.5em;
+$heading-font-family: 'Montserrat', sans-serif;
+
+// Paddings
+
+$gallery-block-margin: 5px;
+$row-padding: 80px;
+
+
+h1{
+    font-family: $heading-font-family;
+    font-weight: 700;
+}
+body{
+    overflow-x: hidden;
+}
+@keyframes block-blink {
+    0%{
+        bottom: 0;
+        top: 0%;
+        height: 0%;
+    }
+    25%{
+        height: 100%;
+        top:0;
+    }
+    50%{
+        height: 100%;
+        top:0;
+    }
+    80%{
+        height: 0;
+        top: 100%;
+    }
+    100%{
+        height: 0;
+        top: 100%; 
+    }
+}
+@keyframes text-blink{
+    0%{
+        color: $grey;
+    }
+    10%{
+        color: $black;
+    }
+    20%{
+        color: $grey;
+    }
+    30%{
+        color: $black;
+    }
+    100%{
+        color: $black;
+    }
+}
+.landing_section{
+    background: $grey;
+    // Slant
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 200px;
+        width: 120%;
+        left: 50%;
+        background: $grey;
+        transform: rotate(-5deg)translateX(-50%)translateY(-100%);
+    }
+    // My Name
+    .name_img{
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+    }
+}
+.landing_padding{
+    padding: 250px 0;
+    position: relative;
+}
+.main_head_text{
+    position: absolute;
+    z-index: 2;
+    font-size: 4.5em;
+    top: 50%;
+    left: 50%;
+    color: $grey;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    opacity: 1;
+    animation: text-blink 1.5s ease-in-out 1 forwards; 
+    -moz-animation: text-blink 1.5s ease-in-out 1 forwards;
+    animation-delay: 1s;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $black;
+        height: 100%;
+        width: 80%;
+        opacity: 1;
+        transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        animation: block-blink 1 ease-in-out 1 forwards; 
+        -moz-animation: block-blink 1s ease-in-out 1 forwards;
+    }
+}
+.section_title{
+    letter-spacing: 15px;
+    font-size: $heading-font-size;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 3.5%;
+    padding-bottom: 40px;
+}
+//Services Section
+.services{
+    position: relative;
+    width: 100%;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 200px;
+        width: 120%;
+        left: 50%;
+        background: white;
+        transform: rotate(-5deg)translateX(-50%)translateY(-100%);
+    }
+    .services_wrapper{
+        padding-bottom: $row-padding;
+        .service_row_one{
+            padding-top: 200px;
+        }
+        .service_row_two{
+            padding-top: $row-padding;
+            position: relative;
+            z-index: 200;
+        }
+        .service_block{
+            background:rgba(0,0,0,0);
+            border: none;
+            .service_title{
+                font-family: $heading-font-family;
+                font-weight: 600;
+                font-size: 1.5em;
+            }
+            .service_description{
+                padding-top: 10px;
+                color: $grey-text;
+            }
+        }
+    }
+}
+.work{
+    background: $grey;
+
+    .work_gallery{
+        padding-top: 220px;
+    }
+    .gallery_block{
+        width: 100%;
+        background:black;
+        height: 250px;
+        overflow: hidden;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .gallery_block_left{
+        margin-right: $gallery-block-margin;
+    }
+    .gallery_block_right{
+        margin-left: $gallery-block-margin;
+    }
+    .gallery_img{
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+        opacity: 1;
+        transform: scale(0.8, 1);
+        transition: all 0.25s ease-in-out;
+        &:hover{
+            transform: scale(0.9,1.1);
+            opacity: 0.7;
+        }
+    }
+}
+
+.work-modal{
+    position: fixed;
+    z-index: 200;
+    background: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    .custom_modal{
+        height: 75vh;
+        width: 100%;
+        position: absolute;
+        z-index: 2500;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0;
+        .modal_top{
+            height: 70%;
+            width: 100%;
+            background: white;
+        }
+        .modal_bottom{
+            height: 30%;
+            width:100%;
+            background: $grey;
+        }
+    }
+}

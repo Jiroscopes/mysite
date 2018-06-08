@@ -1,0 +1,18 @@
+---
+---
+
+$tablet: 768px;
+$desktop: "(min-width: 1024px)";
+
+@media screen and (max-width: $tablet) {
+  .main_head_text {
+    font-size: 3em;
+  }
+  .section_title{
+      font-size: 3em !important;
+      padding-top: 1.5% !important;
+  }
+  .service_row_two{
+      padding-top: 0 !important;
+  }
+}
