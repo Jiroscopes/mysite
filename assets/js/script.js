@@ -27,15 +27,17 @@ $(document).ready(function(){
     });
     $('.under_modal').on('click', function(){
         $('body').css({'overflow-y': 'scroll'});
+        
         $('.work-modal').removeClass('active_modal');
         $('.custom_modal').removeClass('active_custom_modal');
         $('.images').addClass('hidden').delay(2000);
+        $('.modal_text').addClass('hidden').delay(2000);
     });
 
     // Image Gallery Stuff
     $('.gallery_img').on('click', function(){
         var imageSetId = $(this).data('images');
-        $('#' + imageSetId).removeClass('hidden');
+        $('.' + imageSetId).removeClass('hidden');
         console.log(imageSetId)
     });
 
