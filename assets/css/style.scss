@@ -359,9 +359,21 @@ body{
 // ABOUT SECTION
 
 .about{
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 200px;
+        width: 120%;
+        left: 50%;
+        background: white;
+        transform: rotate(-5deg)translateX(-50%)translateY(-100%);
+    }
     .about_content{
         padding-top: 220px;
         padding-bottom: 80px;
+        position: relative;
+        z-index: 199;
         .my_picture{
             width: 100%;
             position: absolute;
@@ -412,6 +424,30 @@ body{
                     }
                 }
             }
+        }
+    }
+}
+
+.contact{
+    background: $grey;
+
+    .email_holder{
+        padding-bottom: 80px;
+    }
+    .send_email{
+        font-family: $heading-font-family;
+        font-size: 1.2em;
+        padding-top: 200px;
+    }
+    .email{
+        color: $grey-text;
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+
+        &:hover{
+            color: #171717;
         }
     }
 }

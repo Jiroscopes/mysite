@@ -16,7 +16,7 @@
     display: none; }
 
   .about_text {
-    padding: 0 !important; } }
+    padding-top: 0 !important; } }
 @media screen and (max-width: 536px) {
   .main_head_text {
     font-size: 2em !important; } }

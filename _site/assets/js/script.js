@@ -21,10 +21,12 @@ $(document).ready(function(){
     });
 
     $('.gallery_img').on('click', function(){
+        $('body').css({'overflow-y': 'hidden'});
         $('.work-modal').addClass('active_modal');
         $('.custom_modal').addClass('active_custom_modal');
     });
     $('.under_modal').on('click', function(){
+        $('body').css({'overflow-y': 'scroll'});
         $('.work-modal').removeClass('active_modal');
         $('.custom_modal').removeClass('active_custom_modal');
         $('.images').addClass('hidden').delay(2000);

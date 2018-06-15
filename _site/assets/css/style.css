@@ -286,9 +286,20 @@ body {
 .hide {
   transform: scale(0) !important; }
 
+.about::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 200px;
+  width: 120%;
+  left: 50%;
+  background: white;
+  transform: rotate(-5deg) translateX(-50%) translateY(-100%); }
 .about .about_content {
   padding-top: 220px;
-  padding-bottom: 80px; }
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 199; }
   .about .about_content .my_picture {
     width: 100%;
     position: absolute;
@@ -328,3 +339,20 @@ body {
           -webkit-transform: scale(0.8);
           -o-transform: scale(0.8);
           -moz-transform: scale(0.8); }
+
+.contact {
+  background: #f0f0f0; }
+  .contact .email_holder {
+    padding-bottom: 80px; }
+  .contact .send_email {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    padding-top: 200px; }
+  .contact .email {
+    color: #696969;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out; }
+    .contact .email:hover {
+      color: #171717; }
