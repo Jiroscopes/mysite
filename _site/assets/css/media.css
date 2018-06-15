@@ -1,10 +1,22 @@
 @media screen and (max-width: 768px) {
-  .main_head_text {
-    font-size: 3em; }
+  .gallery_block_left {
+    margin-right: 0px !important; }
+
+  .gallery_block_right {
+    margin-left: 0px !important; }
 
   .section_title {
     font-size: 3em !important;
     padding-top: 1.5% !important; }
 
   .service_row_two {
-    padding-top: 0 !important; } }
+    padding-top: 0 !important; }
+
+  .my_picture {
+    display: none; }
+
+  .about_text {
+    padding: 0 !important; } }
+@media screen and (max-width: 536px) {
+  .main_head_text {
+    font-size: 2em !important; } }

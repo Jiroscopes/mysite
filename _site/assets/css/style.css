@@ -290,7 +290,9 @@ body {
   padding-top: 220px;
   padding-bottom: 80px; }
   .about .about_content .my_picture {
-    width: 100%; }
+    width: 100%;
+    position: absolute;
+    bottom: 0; }
   .about .about_content .about_text {
     padding-top: 100px; }
     .about .about_content .about_text .my_name {
