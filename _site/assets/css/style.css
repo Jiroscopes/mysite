@@ -285,3 +285,44 @@ body {
 
 .hide {
   transform: scale(0) !important; }
+
+.about .about_content {
+  padding-top: 220px;
+  padding-bottom: 80px; }
+  .about .about_content .my_picture {
+    width: 100%; }
+  .about .about_content .about_text {
+    padding-top: 100px; }
+    .about .about_content .about_text .my_name {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      padding-bottom: 20px; }
+    .about .about_content .about_text .about_desc, .about .about_content .about_text .connect_text {
+      color: #696969;
+      font-size: 1.1em;
+      padding: 10px 0; }
+    .about .about_content .about_text .link_warning {
+      color: #696969;
+      font-size: 0.7em; }
+    .about .about_content .about_text .icons_row {
+      padding: 10px 0; }
+      .about .about_content .about_text .icons_row .icons a {
+        text-decoration: none; }
+      .about .about_content .about_text .icons_row .icons svg {
+        color: #171717;
+        width: 40px;
+        height: 40px;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        -moz-transform: scale(1);
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out; }
+        .about .about_content .about_text .icons_row .icons svg:hover {
+          color: #696969;
+          transform: scale(0.8);
+          -webkit-transform: scale(0.8);
+          -o-transform: scale(0.8);
+          -moz-transform: scale(0.8); }

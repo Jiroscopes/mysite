@@ -354,3 +354,62 @@ body{
 .hide{
     transform: scale(0) !important;
 }
+
+
+// ABOUT SECTION
+
+.about{
+    .about_content{
+        padding-top: 220px;
+        padding-bottom: 80px;
+        .my_picture{
+            width: 100%;
+        }
+        .about_text{
+            padding-top: 100px;
+            .my_name{
+                font-family: $heading-font-family;
+                font-weight: 600;
+                padding-bottom: 20px;
+            }
+            .about_desc, .connect_text{
+                color: $grey-text;
+                font-size: 1.1em;
+                padding: 10px 0;
+            }
+            .link_warning{
+                color: $grey-text;
+                font-size: 0.7em;
+            }
+            .icons_row{
+                padding: 10px 0;
+
+                .icons a{
+                    text-decoration: none;
+    
+                }
+                .icons svg{
+                    color: #171717;
+                    width: 40px;
+                    height: 40px;
+                    transform: scale(1);
+                    -webkit-transform: scale(1);
+                    -o-transform: scale(1);
+                    -moz-transform: scale(1);
+                    transition: all 0.2s ease-in-out;
+                    -webkit-transition: all 0.2s ease-in-out;
+                    -moz-transition: all 0.2s ease-in-out;
+                    -o-transition: all 0.2s ease-in-out;
+    
+                    &:hover{
+                        color: $grey-text;
+                        transform: scale(0.8);
+                        -webkit-transform: scale(0.8);
+                        -o-transform: scale(0.8);
+                        -moz-transform: scale(0.8);
+                    }
+                }
+            }
+        }
+    }
+}
