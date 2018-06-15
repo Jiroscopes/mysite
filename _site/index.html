@@ -111,10 +111,10 @@
         </div>
         <div class="row work_gallery">
             <div class="offset-md-1 col-md-5 gallery_block gallery_block_left" id="block-1">
-                <img class="gallery_img" src="assets/images/solari.jpg" alt="solari melange website">
+                <img id="port-img-one" data-images="img-set-one" class="gallery_img" src="assets/images/solari.jpg" alt="solari melange website">
             </div>
             <div class="col-md-5 gallery_block gallery_block_right" id="block-1">
-                <img class="gallery_img" src="assets/images/solari.jpg" alt="solari melange website">
+                <img id="port-img-two" data-images="img-set-two" class="gallery_img" src="assets/images/solari.jpg" alt="solari melange website">
             </div>
         </div>
     </div>
@@ -122,17 +122,53 @@
 <section class="work-modal">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-10 col-12 custom_modal">
+            <div class="col-md-6 col-sm-10 col-12 custom_modal ">
                 <div class="row modal_top">
-                    <div class="col-12">
-
+                    <div class="col-12 modal_img_wrapper">
+                        <ul class="images hidden" id="img-set-one">
+                            <li>
+                                <img class="main_img mySlides"src="assets/images/solari.jpg" alt="">
+                            </li>
+                            <li>
+                                <img class="other_img mySlides"src="assets/images/NAME.png" alt="">
+                            </li>
+                        </ul>
+                        <ul class="images hidden" id="img-set-two">
+                            <li>
+                                <img class="main_img mySlides"src="assets/images/NAME.png" alt="">
+                            </li>
+                            <li>
+                                <img class="other_img mySlides"src="assets/images/solari.jpg" alt="">
+                            </li>
+                        </ul>
+                        <ul class="triggers">
+                            <li class="img_nav" id="one"></li>
+                            <li class="img_nav" id="two"></li>
+                            <li class="img_nav" id="three"></li>
+                            <li class="img_nav" id="four"></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="row modal_bottom">
                     <div class="col-12">
-
+                        <p class="modal_text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus labore recusandae eligendi minus, dolore quos nihil accusantium reiciendis culpa autem impedit velit odit dolorum perferendis repellendus quis vitae fuga voluptatem.
+                        </p>
                     </div>
                 </div>
+            </div>
+            <div class="col-12 under_modal "></div>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <div class="container work_wrapper">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="section_title">
+                    ABOUT ME
+                </h1>
             </div>
         </div>
     </div>
@@ -140,8 +176,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

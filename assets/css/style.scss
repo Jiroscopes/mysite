@@ -18,7 +18,12 @@ $heading-font-family: 'Montserrat', sans-serif;
 $gallery-block-margin: 5px;
 $row-padding: 80px;
 
-
+ul{
+    list-style-type: none;
+}
+li{
+    float: left;
+}
 h1{
     font-family: $heading-font-family;
     font-weight: 700;
@@ -102,6 +107,7 @@ body{
     opacity: 1;
     animation: text-blink 1.5s ease-in-out 1 forwards; 
     -moz-animation: text-blink 1.5s ease-in-out 1 forwards;
+    -webkit-animation: text-blink 1.5s ease-in-out 1 forwards;
     animation-delay: 1s;
     &::before{
         content: '';
@@ -114,8 +120,10 @@ body{
         opacity: 1;
         transition: all 0.3s ease-out;
         -moz-transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out;
         animation: block-blink 1 ease-in-out 1 forwards; 
         -moz-animation: block-blink 1s ease-in-out 1 forwards;
+        -webkit-animation: block-blink 1s ease-in-out 1 forwards;
     }
 }
 .section_title{
@@ -169,13 +177,18 @@ body{
 }
 .work{
     background: $grey;
-
+    
+    .work_wrapper{
+        padding-bottom: 80px;
+    }
     .work_gallery{
         padding-top: 220px;
+        position: relative;
+        z-index: 199;
     }
     .gallery_block{
         width: 100%;
-        background:black;
+        // margin: 0 !important;
         height: 250px;
         overflow: hidden;
         padding: 0;
@@ -200,16 +213,41 @@ body{
             opacity: 0.7;
         }
     }
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 200px;
+        width: 120%;
+        left: 50%;
+        background: $grey;
+        transform: rotate(-5deg)translateX(-50%)translateY(-100%);
+    }
 }
-
+.hidden{
+    display: none;
+}
+.active_modal{
+    visibility: visible !important;
+}
+.active_custom_modal{
+    transform: translate(-50%, -50%) scale(1, 1) !important;
+    -webkit-transform: translate(-50%, -50%) scale(1, 1) !important;
+    -moz-transform: translate(-50%, -50%) scale(1, 1) !important;
+    -o-transform: translate(-50%, -50%) scale(1, 1) !important;
+}
 .work-modal{
     position: fixed;
     z-index: 200;
-    background: rgba(0, 0, 0, 0.8);
     height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
     .custom_modal{
         height: 75vh;
         width: 100%;
@@ -217,17 +255,102 @@ body{
         z-index: 2500;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 0;
+        transform: translate(-50%, -50%) scale(0, 0);
+        -webkit-transform: translate(-50%, -50%) scale(0, 0);
+        -moz-transform: translate(-50%, -50%) scale(0, 0);
+        -o-transform: translate(-50%, -50%) scale(0, 0);
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
         .modal_top{
             height: 70%;
             width: 100%;
+            margin: 0;
             background: white;
+            .modal_img_wrapper{
+                overflow: hidden;
+                text-align: center;
+                padding: 0;
+                .images{
+                    padding: 0;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    float:left;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    li{
+                        height: 100%;
+                        width: 100%;
+                    }
+                    .main_img{
+                        width: 100%;
+                        height: 100%;
+                        padding: 0;
+                        position: relative;
+                    }
+                    .other_img{
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .triggers{
+                    position: absolute;
+                    z-index: 300;
+                    bottom: 0;
+                    left: 50%;
+                    padding: 0;
+                    transform: translatex(-50%);
+                    .img_nav{
+                        cursor: pointer;
+                        background: rgba(255, 255, 255, 0.7);
+                        height: 10px;
+                        width: 15px;
+                        float: left;
+                        border-radius: 20px;
+                        margin-left: 20px;
+                        transition: background 0.2s ease-in-out;
+
+                        &:hover{
+                            background: rgba(255, 255, 255, 1);
+                        }
+                    }
+                }
+            }
         }
         .modal_bottom{
             height: 30%;
             width:100%;
+            margin: 0;
             background: $grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .modal_text{
+                color: black;
+                font-size: 0.9em;
+                width: 90%;
+                margin: 0 auto;
+            }
         }
     }
+    .under_modal{
+        background: rgba(0, 0, 0, 0.8);
+        height: 100%;
+        width: 100%;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+    }
+}
+.hide{
+    transform: scale(0) !important;
 }
