@@ -18,6 +18,8 @@ $heading-font-family: 'Montserrat', sans-serif;
 $gallery-block-margin: 5px;
 $row-padding: 80px;
 
+$psudo-width: 100%;
+
 ul{
     list-style-type: none;
 }
@@ -79,7 +81,7 @@ body{
         display: block;
         position: absolute;
         height: 200px;
-        width: 120%;
+        width: $psudo-width;
         left: 50%;
         background: $grey;
         transform: rotate(-5deg)translateX(-50%)translateY(-100%);
@@ -145,7 +147,7 @@ body{
         display: block;
         position: absolute;
         height: 200px;
-        width: 120%;
+        width: $psudo-width;
         left: 50%;
         background: white;
         transform: rotate(-5deg)translateX(-50%)translateY(-100%);
@@ -219,7 +221,7 @@ body{
         display: block;
         position: absolute;
         height: 200px;
-        width: 120%;
+        width: $psudo-width;
         left: 50%;
         background: $grey;
         transform: rotate(-5deg)translateX(-50%)translateY(-100%);
@@ -372,7 +374,7 @@ body{
         display: block;
         position: absolute;
         height: 200px;
-        width: 120%;
+        width: $psudo-width;
         left: 50%;
         background: white;
         transform: rotate(-5deg)translateX(-50%)translateY(-100%);
